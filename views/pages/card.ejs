@@ -1,51 +1,57 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <style type="text/css">
-			body{
-				height: 97%;
-				width: 99%;
-				background-color: rgba(255,0,0,0.6);
-				position: absolute;
-			}
-			p{
-				width: 80%;
-				margin-left: 10%;
-				text-align: center;
-				color: white;
-				font-size: 26px;
-			}
-			h1{
-				position: absolute;
-				text-align: center;
-				color: white;
-				width: 100%;
-				height: 100%;
-				font-size: 50px;
-			}
-			button{
-				font-size: 23px;
-				background-color: white;
-				border: 0;
-				padding: 15px;
-				margin: 0 auto;
-				display: inherit;
-			}
-      #header{
-        height: 25%;
-        position: relative;
-      }
-      #cuerpo{
-        height: 60%;
-        position: relative;
-      }
-      #footer{
-        height: 10%;
-        position: relative;
-      }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <style type="text/css">
+    body{
+      height: 97%;
+      width: 99%;
+      position: absolute;
+    }
+    p{
+      width: 80%;
+      margin-left: 10%;
+      text-align: center;
+      color: #F57C00;
+      font-size: 26px;
+      text-transform: uppercase;
+    }
+    h2{
+      width: 80%;
+      margin-left: 10%;
+      text-align: center;
+      color: black;
+      font-size: 26px;
+      margin-top: 8%;
+      text-transform: uppercase;
+    }
+    h1{
+      position: absolute;
+      text-align: center;
+      color: white;
+      width: 100%;
+      height: 100%;
+      font-size: 50px;
+    }
+    button{
+      font-size: 23px;
+      background-color: white;
+      border: 0;
+      padding: 15px;
+      margin: 0 auto;
+      display: inherit;
+    }
+    #header{
+      background-color: #FF9800;
+      height: 10%;
+      position: relative;
+    }
+    #cuerpo{
+      height: 50%;
+      position: relative;
+    }
+  </style>
     <!--[if (gte mso 9)|(IE)]>
     <style type="text/css">
         table {border-collapse: collapse !important;}
@@ -54,18 +60,27 @@
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
     <script type="text/javascript">
       var config = {
-        apiKey: "<API_KEY>",
-        authDomain: "<PROJECT_ID>.firebaseapp.com",
-        databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-        projectId: "<PROJECT_ID>",
-        storageBucket: "<BUCKET>.appspot.com",
-        messagingSenderId: "<SENDER_ID>",
+        apiKey: "AIzaSyAt6FyQYm_oht2b2L0UjNxBgEMxPuAI2Zg",
+        authDomain: " lastminutemeal-80c81.firebaseapp.com",
+        databaseURL: "https://lastminutemeal-80c81.firebaseio.com/",
+        projectId: " lastminutemeal-80c81",
       };
       firebase.initializeApp(config);
+      var database = firebase.database();
+
+
 
       function getData() {
         var id = getQueryVariable("id");
         alert(id);
+        var ref = database.ref("booking/"+id);
+
+        // Attach an asynchronous callback to read the data at our posts reference
+        ref.on("value", function(snapshot) {
+          console.log(snapshot.val());
+        }, function (errorObject) {
+          console.log("The read failed: " + errorObject.code);
+        });
       }
 
       function getQueryVariable(variable) {
@@ -85,11 +100,36 @@
 		<h1>lastMinuteMeal</h1>
   </div>
   <div id="cuerpo">
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-		<button type="button" onclick="window.location.href='https://github.com/NetworkPlatforms1718UdL/LastMinuteMeal'">Click</button>
-  </div>
-  <div id="footer">
-		<p style="font-size: 14px; text-align: right;">&copy;lastMinuteMeal 2018</p>
+  	<hr>
+  	<table style="width:80%; margin-left: 10%; margin-top: 10%;">
+		<tr>
+			<th>
+				<h2>nº reserva</h2>
+				<p>123456789</p>
+			</th>
+			<th>
+				<h2>Nombre de usuario</h2>
+				<p>Jaume Sergio</p>
+			</th>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h2>Nombre restaurante</h2>
+				<p>Bar Roma</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>Hora reserva</h2>
+				<p>22:00</p>
+			</td>
+			<td>
+				<h2>Nº Personas</h2>
+				<p>4</p>
+			</td>
+		</tr>
+	</table>
+	<h2><img src="https://dmfs.org/wiki/images/6/65/Carddav-qr.png"></h2>
   </div>
 </body>
 </html>
