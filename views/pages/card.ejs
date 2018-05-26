@@ -72,15 +72,15 @@
 
       function getData() {
         var id = getQueryVariable("id");
-        alert(id);
+        document.getElementById("idReserva").innerHTML = id;
         var ref = database.ref("booking/"+id);
-
         // Attach an asynchronous callback to read the data at our posts reference
         ref.on("value", function(snapshot) {
           console.log(snapshot.val());
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
         });
+        return id;
       }
 
       function getQueryVariable(variable) {
@@ -96,16 +96,18 @@
     </script>
 </head>
 <body onload="getData()">
+<!--
   <div id="header">
 		<h1>lastMinuteMeal</h1>
   </div>
+-->
   <div id="cuerpo">
   	<hr>
   	<table style="width:80%; margin-left: 10%; margin-top: 10%;">
 		<tr>
 			<th>
 				<h2>nº reserva</h2>
-				<p>123456789</p>
+				<p id="idReserva"></p>
 			</th>
 			<th>
 				<h2>Nombre de usuario</h2>
