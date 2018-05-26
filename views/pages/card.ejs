@@ -76,11 +76,16 @@
         var ref = database.ref("booking/"+id);
         // Attach an asynchronous callback to read the data at our posts reference
         ref.on("value", function(snapshot) {
-          console.log(snapshot.val());
+          var hora = snapshot.child("time").val();
+          var personas = snapshot.child("persons").val();
+          var name = snapshot.child("restaurant_id").val();
+          document.getElementById("time").innerHTML = hora;
+          document.getElementById("persons").innerHTML = personas;
+          document.getElementById("restaurant_id").innerHTML = name;
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
         });
-        return id;
+        return id, hora, personas, name;
       }
 
       function getQueryVariable(variable) {
@@ -111,23 +116,23 @@
 			</th>
 			<th>
 				<h2>Nombre de usuario</h2>
-				<p>Jaume Sergio</p>
+				<p>Montse Sendín</p>
 			</th>
 		</tr>
 		<tr>
 			<td colspan="2">
 				<h2>Nombre restaurante</h2>
-				<p>Bar Roma</p>
+				<p id="restaurant_id"></p>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				<h2>Hora reserva</h2>
-				<p>22:00</p>
+				<p id="time"></p>
 			</td>
 			<td>
 				<h2>Nº Personas</h2>
-				<p>4</p>
+				<p id="persons"></p>
 			</td>
 		</tr>
 	</table>
