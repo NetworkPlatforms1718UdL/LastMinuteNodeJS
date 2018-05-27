@@ -76,26 +76,28 @@
 		<h1>lastMinuteMeal</h1>
   </div>
   <div id="cuerpo">
-		<button class="accordion">Section 1</button>
+		<button class="accordion">How do I know if my order has been confirmed?</button>
 		<div class="panel">
-		  <p>Lorem ipsum...</p>
+		  <p>You will receive a push notification that will confirm your order.
+			  When you arrive at the restaurant at the indicated time, you can enjoy the food. </p>
 		</div>
 
-		<button class="accordion">Section 2</button>
+		<button class="accordion">My order has been rejected. What can I do?</button>
 		<div class="panel">
-		  <p>Lorem ipsum...</p>
+		  <p>If you paid up front, your money will be returned to you straight away. You can then order from a different restaurant.</p>
 		</div>
 
-		<button class="accordion">Section 3</button>
+		<button class="accordion">I've arrive at the restaurant, but the order it’s not right. What should I do?
+		</button>
 		<div class="panel">
-		  <p>Lorem ipsum...</p>
+		  <p>Sorry to hear that. The best thing to do is talk with the restaurant. If the restaurant doesn't make things right, get in touch with us.</p>
 		</div>
   </div>
   <script type="application/javascript">
       let acc = document.getElementsByClassName("accordion");
       let i;
 
-    for (i = 0; i &lt; acc.length; i++) {
+    for (i = 0; i < acc.length; i++) {
 	    acc[i].addEventListener("click", function() {
 	        this.classList.toggle("active");
             let panel = this.nextElementSibling;
