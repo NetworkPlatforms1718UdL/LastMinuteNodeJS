@@ -1,6 +1,6 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -11,4 +11,4 @@ express()
   .get(/se[a-z]/, (req, res) => res.render('pages/services'))
   .get('/faqs', (req, res) => res.render('pages/faqs'))
   .get('/card', (req, res) => res.render('pages/card'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));

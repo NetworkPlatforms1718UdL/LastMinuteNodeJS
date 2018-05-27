@@ -56,11 +56,8 @@
 		}
 
 		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-		.active, .accordion:hover {
-		    background-color: #ccc;
-		}
 
-		/* Style the accordion panel. Note: hidden by default */
+			/* Style the accordion panel. Note: hidden by default */
 		.panel {
 		    padding: 0 18px;
 		    background-color: white;
@@ -94,15 +91,15 @@
 		  <p>Lorem ipsum...</p>
 		</div>
   </div>
-  <script>
-	var acc = document.getElementsByClassName("accordion");
-	var i;
+  <script type="application/javascript">
+      let acc = document.getElementsByClassName("accordion");
+      let i;
 
-	for (i = 0; i < acc.length; i++) {
+    for (i = 0; i &lt; acc.length; i++) {
 	    acc[i].addEventListener("click", function() {
 	        this.classList.toggle("active");
-	        var panel = this.nextElementSibling;
-	        if (panel.style.display === "block") {
+            let panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
 	            panel.style.display = "none";
 	        } else {
 	            panel.style.display = "block";
