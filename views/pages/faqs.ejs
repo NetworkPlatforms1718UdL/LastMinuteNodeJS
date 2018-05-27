@@ -1,113 +1,124 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-			body{
-				height: 97%;
-				width: 99%;
-				background-color: #FF9800;
-				position: absolute;
-			}
-			p{
-				width: 80%;
-				margin-left: 10%;
-				text-align: center;
-				color: #212121;
-				font-size: 26px;
-			}
-			h1{
-				position: absolute;
-				text-align: center;
-				color: #757575;
-				width: 100%;
-				height: 100%;
-				font-size: 50px;
-			}
-			button{
-				font-size: 23px;
-				background-color: #757575;
-				border: 0;
-				padding: 15px;
-				margin: 0 auto;
-				display: inherit;
-			}
-      #header{
-        height: 25%;
-        position: relative;
-      }
-      #cuerpo{
-        height: auto;
-        position: relative;
-      }
+        body {
+            height: 97%;
+            width: 99%;
+            background-color: #FF9800;
+            position: absolute;
+        }
 
-      /* Style the buttons that are used to open and close the accordion panel */
-		.accordion {
-		    background-color: #eee;
-		    color: #444;
-		    cursor: pointer;
-		    padding: 18px;
-		    width: 100%;
-		    text-align: left;
-		    border: none;
-		    outline: none;
-		    transition: 0.4s;
-		}
+        p {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            color: #212121;
+            font-size: 26px;
+        }
 
-		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        h1 {
+            position: absolute;
+            text-align: center;
+            color: #757575;
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+        }
 
-			/* Style the accordion panel. Note: hidden by default */
-		.panel {
-		    padding: 0 18px;
-		    background-color: white;
-		    display: none;
-		    overflow: hidden;
-		}
+        button {
+            font-size: 23px;
+            background-color: #757575;
+            border: 0;
+            padding: 15px;
+            margin: 0 auto;
+            display: inherit;
+        }
+
+        #header {
+            height: 25%;
+            position: relative;
+        }
+
+        #cuerpo {
+            height: auto;
+            width: 80%;
+            position: relative;
+        }
+
+        /* Style the buttons that are used to open and close the accordion panel */
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+        /* Style the accordion panel. Note: hidden by default */
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
     </style>
     <!--[if (gte mso 9)|(IE)]>
     <style type="text/css">
-        table {border-collapse: collapse !important;}
+        table {
+            border-collapse: collapse !important;
+        }
     </style>
     <![endif]-->
 </head>
 <body>
-  <div id="header">
-		<h1>lastMinuteMeal</h1>
-  </div>
-  <div id="cuerpo">
-		<button class="accordion">How do I know if my order has been confirmed?</button>
-		<div class="panel">
-		  <p>You will receive a push notification that will confirm your order.
-			  When you arrive at the restaurant at the indicated time, you can enjoy the food. </p>
-		</div>
+<div id="header">
+    <h1>LastMinute Meal</h1>
+</div>
+<div id="cuerpo">
+    <button class="accordion">How do I know if my order has been confirmed?</button>
+    <div class="panel">
+        <p>You will receive a push notification that will confirm your order.
+            When you arrive at the restaurant at the indicated time, you can enjoy the food. </p>
+    </div>
 
-		<button class="accordion">My order has been rejected. What can I do?</button>
-		<div class="panel">
-		  <p>If you paid up front, your money will be returned to you straight away. You can then order from a different restaurant.</p>
-		</div>
+    <button class="accordion">My order has been rejected. What can I do?</button>
+    <div class="panel">
+        <p>If you paid up front, your money will be returned to you straight away. You can then order from a different
+            restaurant.</p>
+    </div>
 
-		<button class="accordion">I've arrive at the restaurant, but the order it’s not right. What should I do?
-		</button>
-		<div class="panel">
-		  <p>Sorry to hear that. The best thing to do is talk with the restaurant. If the restaurant doesn't make things right, get in touch with us.</p>
-		</div>
-  </div>
-  <script type="application/javascript">
-      let acc = document.getElementsByClassName("accordion");
-      let i;
+    <button class="accordion">I've arrive at the restaurant, but the order it’s not right. What should I do?
+    </button>
+    <div class="panel">
+        <p>Sorry to hear that. The best thing to do is talk with the restaurant. If the restaurant doesn't make things
+            right, get in touch with us.</p>
+    </div>
+</div>
+<script type="application/javascript">
+    let acc = document.getElementsByClassName("accordion");
+    let i;
 
     for (i = 0; i < acc.length; i++) {
-	    acc[i].addEventListener("click", function() {
-	        this.classList.toggle("active");
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
             let panel = this.nextElementSibling;
             if (panel.style.display === "block") {
-	            panel.style.display = "none";
-	        } else {
-	            panel.style.display = "block";
-	        }
-	    });
-	}
-	</script>
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 </body>
 </html>

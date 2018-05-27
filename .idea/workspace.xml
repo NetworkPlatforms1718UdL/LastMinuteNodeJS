@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78ff84b3-85ed-45c9-bdde-c3fe8a308f0c" name="Default" comment="" />
+    <list default="true" id="78ff84b3-85ed-45c9-bdde-c3fe8a308f0c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/views/pages/faqs.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/faqs.ejs" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="faqs.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/faqs.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+            <state relative-caret-position="315">
+              <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -139,17 +141,17 @@
       <updated>1527431770448</updated>
       <workItem from="1527431773021" duration="252000" />
       <workItem from="1527432062225" duration="27000" />
-      <workItem from="1527432104023" duration="5668000" />
+      <workItem from="1527432104023" duration="6024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5947000" />
+    <option name="totallyTimeSpent" value="6303000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="960" y="27" width="960" height="1053" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18459916" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37393162" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -221,8 +223,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/faqs.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="315">
+          <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
         </state>
       </provider>
     </entry>
